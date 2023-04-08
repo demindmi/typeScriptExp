@@ -47,8 +47,28 @@ export const decodedValue = ([first, second]: string[]) => {
 
 // alternative 
 export type Color = typeof COLORS[number];
-export function decodedValue2([band1, band2]: Color[]): number { return 1; }
+export function decodedValue2([band1, band2]: Color[]): number {
+  return 1;
+}
 
-console.log(decodedValue(['white', 'red'])); // 92
+console.log(decodedValue(["white", "red"])); // 92
 console.log(decodedValue(["green", "brown", "orange"])); // 51
+
+// ****************************************************
+let personType1: {
+  name: string;
+  age: number;
+};
+
+type personType2 = typeof personType1;
+let person: personType2 = {
+  name: "John",
+  age: 30,
+};
+
+
+
+
+
+
 
